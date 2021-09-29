@@ -1,17 +1,920 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Tailwind CSS Starter</title>
-        <link rel="stylesheet" href="dist/styles.css" />
-    </head>
-    <body>
-        <h1
-            class="font-bold text-3xl text-center max-w-2xl mx-auto mt-12 bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YOUTUBE-CLONE</title>
+    <link rel="stylesheet" href="dist/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/613f7240b7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="w-full bg-gray-300 h-auto p-4 bg-opacity-50 flex mb-o">
+      <!--sidebar-->
+      <div
+        class="
+          sidebar
+          h-screen
+          w-60
+          bg-white bg-opacity-90
+          rounded-xl
+          p-2
+          flex flex-col
+        "
+      >
+        <!--logo-->
+        <div class="logo flex justify-center mb-2">
+          <a href="https://www.youtube.com/"
+            ><img class="bg-white h-12" src="img/logo.png" alt="logo"
+          /></a>
+        </div>
+        <div class="sidebar-content ml-2">
+          <!--library-->
+          <div class="hover:bg-gray-300 mb-4">
+            <a class="" href="https://www.youtube.com/feed/library">
+              <div class="library flex ml-2 mb-0 items-center">
+                <span>
+                  <svg
+                    height="22"
+                    viewBox="0 0 48 48"
+                    width="22"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 0h48v48H0z" fill="none" />
+                    <path
+                      d="M8 12H4v28c0 2.21 1.79 4 4 4h28v-4H8V12zm32-8H16c-2.21 0-4 1.79-4 4v24c0 2.21 1.79 4 4 4h24c2.21 0 4-1.79 4-4V8c0-2.21-1.79-4-4-4zM24 29V11l12 9-12 9z"
+                    />
+                  </svg>
+                </span>
+                <span class="px-2 text-gray-700 text-lg">Library</span>
+              </div>
+            </a>
+          </div>
+          <div class="hover:bg-gray-300 mb-4">
+            <a class="" href="https://www.youtube.com/feed/library">
+              <div class="library flex mb-0 items-center">
+                <span class="flex ml-2 mb-0 items-center sm:w-4 h-4">
+                  <i class="fas fa-history"></i>
+                </span>
+                <span class="px-2 text-gray-700 ml-2 text-lg">History</span>
+              </div>
+            </a>
+          </div>
+          <div class="hover:bg-gray-300 mb-4">
+            <a
+              class=""
+              href="https://studio.youtube.com/channel/UCauCb2vgNWaMRSMfkJenf5g/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7Dhttps://studio.youtube.com/channel/UCauCb2vgNWaMRSMfkJenf5g/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D"
+            >
+              <div class="library flex mb-0 items-center">
+                <span class="flex ml-2 mb-0 items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+                <span class="px-2 text-gray-700 ml-1 text-lg">Your videos</span>
+              </div>
+            </a>
+          </div>
+          <div class="hover:bg-gray-300 mb-4">
+            <a class="" href="https://www.youtube.com/feed/library">
+              <div class="library flex mb-0 items-center">
+                <span class="flex ml-2 mb-0 items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+                <span class="px-2 text-gray-700 ml-1 text-lg">Watch later</span>
+              </div>
+            </a>
+          </div>
+          <div class="hover:bg-gray-300 mb-4">
+            <a class="" href="https://www.youtube.com/feed/library">
+              <div class="library flex ml-2 mb-0 items-center">
+                <span class="flex mb-0 items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"
+                    />
+                  </svg>
+                </span>
+                <span class="px-2 text-gray-700 ml-1 text-lg"
+                  >Liked videos</span
+                >
+              </div>
+            </a>
+          </div>
+          <div class="hover:bg-gray-300">
+            <a class="" href="https://www.youtube.com/feed/library">
+              <div class="library flex mb-0 items-center">
+                <span class="flex ml-2 mb-0 items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </span>
+                <span class="px-1 text-gray-700 ml-1 text-lg">Show more</span>
+              </div>
+            </a>
+          </div>
+          <!--Subscriptions start-->
+          <h3 class="text-sm mt-5 text-bold font-bold text-gray-600 ml-3">
+            SUBSCRIPTIONS
+          </h3>
+          <div class="pt-2 ml-2">
+            <a
+              class="flex text-sm items-center"
+              href="https://www.youtube.com/c/TheNetNinja"
+            >
+              <img
+                src="img/ninja.jpg"
+                alt="profile"
+                class="w-6 h-6 rounded-full object-cover opacity-90"
+              />
+              <h6 class="ml-2 text-gray-600">THE NET NINJA</h6>
+            </a>
+          </div>
+          <div class="pt-2 ml-2">
+            <a
+              class="flex text-sm items-center"
+              href="https://www.youtube.com/results?search_query=tech+lead"
+            >
+              <img
+                src="img/techlead.jpeg"
+                alt="profile"
+                class="w-6 h-6 rounded-full object-cover opacity-90"
+              />
+              <h6 class="ml-2 text-gray-600">Tech Lead</h6>
+            </a>
+          </div>
+          <div class="pt-2 ml-2">
+            <a
+              class="flex text-sm items-center"
+              href="https://www.youtube.com/c/MrBeast6000"
+            >
+              <img
+                src="img/mrbeast.jpg"
+                alt="profile"
+                class="w-6 h-6 rounded-full object-cover opacity-90"
+              />
+              <h6 class="ml-2 text-gray-600">MR BEAST</h6>
+            </a>
+          </div>
+          <div class="pt-2 ml-2">
+            <a
+              class="flex text-sm items-center"
+              href="https://www.youtube.com/c/CleverProgrammer"
+            >
+              <img
+                src="img/clever.jpg"
+                alt="profile"
+                class="w-6 h-6 rounded-full object-cover opacity-100"
+              />
+              <h6 class="ml-2 text-gray-600">Clever Programmer</h6>
+            </a>
+          </div>
+          <div class="pt-2 ml-2">
+            <a
+              class="flex text-sm items-center"
+              href="https://www.youtube.com/user/ssangha32"
+            >
+              <img
+                src="img/sonny.jpg"
+                alt="profile"
+                class="w-6 h-6 rounded-full object-cover opacity-100"
+              />
+              <h6 class="ml-2 text-gray-600">Sonny Sangha</h6>
+            </a>
+          </div>
+          <div class="mt-2">
+            <a class="" href="https://www.youtube.com/feed/library">
+              <div class="flex mb-0 items-center">
+                <span class="flex mb-0 ml-2 items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </span>
+                <span class="text-gray-700 ml-1 text-sm px-2"
+                  >Show 70 more</span
+                >
+              </div>
+            </a>
+          </div>
+          <h4 class="text-sm font-bold text-gray-600 ml-2 mt-5">
+            MORE FROM YOUTUBE
+          </h4>
+          <div class="mt-3">
+            <a class="" href="https://www.youtube.com/premium">
+              <div class="flex items-center">
+                <span class="flex mb-0 ml-2 items-center">
+                  <i class="fab fa-youtube"></i>
+                </span>
+                <span class="text-gray-700 ml-1 text-sm px-2"
+                  >YOUTUBE PREMIUM</span
+                >
+              </div>
+            </a>
+          </div>
+          <div class="mt-3">
+            <a class="" href="https://www.youtube.com/GAMING">
+              <div class="flex items-center">
+                <span class="flex mb-0 ml-2 items-center">
+                  <i class="fas fa-dice-d20"></i>
+                </span>
+                <span class="text-gray-700 ml-1 text-sm px-2">GAMING</span>
+              </div>
+            </a>
+          </div>
+          <div class="mt-3">
+            <a
+              class=""
+              href="https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig"
+            >
+              <div class="flex items-center">
+                <span class="flex mb-0 ml-2 items-center">
+                  <svg
+                    fill="#000000"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="20px"
+                    height="24px"
+                  >
+                    <path
+                      d="M 4.2089844 4.6796875 C 3.9353594 4.6946875 3.6670156 4.8217344 3.4785156 5.0527344 C 1.9305156 6.9487344 1 9.367 1 12 C 1 14.633 1.9305156 17.051266 3.4785156 18.947266 C 3.8565156 19.409266 4.5506562 19.451297 4.9726562 19.029297 C 5.3316562 18.670297 5.3669219 18.097078 5.0449219 17.705078 C 3.7679219 16.150078 3 14.163 3 12 C 3 9.837 3.7679219 7.850875 5.0449219 6.296875 C 5.3669219 5.904875 5.3316563 5.3316563 4.9726562 4.9726562 C 4.7616562 4.7616562 4.4826094 4.6646875 4.2089844 4.6796875 z M 19.791016 4.6796875 C 19.517391 4.6646875 19.238344 4.7616562 19.027344 4.9726562 C 18.668344 5.3316562 18.633078 5.904875 18.955078 6.296875 C 20.232078 7.850875 21 9.837 21 12 C 21 14.163 20.232078 16.149125 18.955078 17.703125 C 18.633078 18.095125 18.668344 18.668344 19.027344 19.027344 C 19.449344 19.449344 20.144484 19.410266 20.521484 18.947266 C 22.069484 17.052266 23 14.633 23 12 C 23 9.367 22.069484 6.9487344 20.521484 5.0527344 C 20.332984 4.8217344 20.064641 4.6946875 19.791016 4.6796875 z M 7.0429688 7.5234375 C 6.7655937 7.5389375 6.4968125 7.6681094 6.3203125 7.9121094 C 5.4903125 9.0631094 5 10.476 5 12 C 5 13.524 5.4903125 14.936891 6.3203125 16.087891 C 6.6733125 16.575891 7.3923594 16.607641 7.8183594 16.181641 L 7.8222656 16.177734 C 8.1732656 15.826734 8.1991094 15.281953 7.9121094 14.876953 C 7.3381094 14.062953 7 13.07 7 12 C 7 10.93 7.3381094 9.9370469 7.9121094 9.1230469 C 8.1981094 8.7170469 8.1732656 8.1732656 7.8222656 7.8222656 L 7.8183594 7.8183594 C 7.6053594 7.6053594 7.3203438 7.5079375 7.0429688 7.5234375 z M 16.957031 7.5234375 C 16.679656 7.5079375 16.394641 7.6053594 16.181641 7.8183594 L 16.177734 7.8222656 C 15.826734 8.1732656 15.800891 8.7180469 16.087891 9.1230469 C 16.661891 9.9370469 17 10.93 17 12 C 17 13.07 16.661891 14.062953 16.087891 14.876953 C 15.801891 15.282953 15.826734 15.826734 16.177734 16.177734 L 16.181641 16.181641 C 16.607641 16.607641 17.327688 16.575891 17.679688 16.087891 C 18.510687 14.937891 19 13.524 19 12 C 19 10.476 18.509688 9.0631094 17.679688 7.9121094 C 17.503188 7.6681094 17.234406 7.5389375 16.957031 7.5234375 z M 12 9 A 3 3 0 0 0 12 15 A 3 3 0 0 0 12 9 z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-gray-700 ml-1 text-sm px-2">LIVE</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!--library-end-->
+
+      <dinv class="main w-full border-gray-300 bg-opacity-50 h-screen">
+        <!--header-->
+        <div
+          class="
+            header
+            bg-white
+            w-full
+            ml-3
+            h-12
+            mr-6
+            rounded-lg
+            flex
+            items-center
+            divide-y
+          "
         >
-            If you see a beautiful gradient on this text, Tailwind CSS is
-            successfully installed and setup
-        </h1>
-    </body>
+          <div
+            class="
+              bg-gray-100
+              w-10
+              h-10
+              m-3
+              flex
+              items-center
+              rounded-lg
+              justify-center
+              text-gray-800
+            "
+          >
+            <a href="https://www.youtube.com/">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="
+              bg-gray-100
+              w-10
+              h-10
+              m-3
+              flex
+              items-center
+              rounded-lg
+              justify-center
+              text-red-600
+              text-opacity-90
+            "
+          >
+            <a href="https://www.youtube.com/">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="
+              bg-gray-100
+              w-10
+              h-10
+              m-3
+              flex
+              items-center
+              rounded-lg
+              justify-center
+              text-gray-800
+            "
+          >
+            <a href="https://www.youtube.com/feed/trending?bp=6gQJRkVleHBsb3Jl">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="
+              bg-gray-100
+              w-10
+              h-10
+              m-3
+              flex
+              items-center
+              rounded-lg
+              justify-center
+              text-gray-800
+            "
+          >
+            <a href="https://www.youtube.com/feed/subscriptions">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="search-bar ml-10 mr-10 w-96 flex justify-center items-center"
+          >
+            <input
+              class="
+                bg-gray-100
+                h-10
+                rounded-l-lg
+                flex
+                pl-3
+                focus:outline-none
+                w-full
+              "
+              type="search"
+              name="search"
+              id=""
+              placeholder="search"
+            />
+            <div
+              class="
+                bg-gray-100
+                w-10
+                h-10
+                m-3
+                ml-auto
+                border-l-2 border
+                flex
+                items-center
+                rounded-r-lg
+                justify-center
+                text-gray-800
+              "
+            >
+              <a
+                href="https://www.youtube.com/feed/trending?bp=6gQJRkVleHBsb3Jl"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!--search end-->
+          <div
+            class="right-icons flex ml-auto justify-around items-center mr-3"
+          >
+            <div
+              class="
+                bg-gray-100
+                w-10
+                h-10
+                m-3
+                flex
+                items-center
+                rounded-lg
+                justify-center
+                text-gray-800
+              "
+            >
+              <a href="https://www.youtube.com/feed/subscriptions">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div
+              class="
+                bg-gray-100
+                w-10
+                h-10
+                m-3
+                flex
+                items-center
+                rounded-lg
+                justify-center
+                text-gray-600
+              "
+            >
+              <a href="https://www.youtube.com/feed/subscriptions">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div
+              class="
+                bg-gray-100
+                w-10
+                h-10
+                m-3
+                flex
+                items-center
+                rounded-lg
+                justify-center
+                text-gray-600
+                p-1
+              "
+            >
+              <a href="https://www.youtube.com/feed/subscriptions">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div
+              class="
+                two-icons
+                flex
+                items-center
+                justify-center
+                bg-gray-100
+                h-10
+                rounded-xl
+              "
+            >
+              <div
+                class="
+                  bg-gray-500
+                  text-white
+                  flex
+                  justify-center
+                  items-center
+                  ml-1
+                  rounded-lg
+                  h-7
+                  w-7
+                "
+              >
+                <svg
+                  class="h-6 w-5 py-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!--Header end-->
+        <!--recomendations start-->
+        <div  class="
+        recomendations
+        bg-gray-200
+        bg-opacity-0
+        w-full
+        ml-3
+        h-14
+        mt-3
+        rounded-lg
+        flex
+        items-center
+        divide-y
+      ">
+    <a href="https://www.youtube.com"><span class="ml-4 w-12 h-8 bg-gray-900 flex items-center justify-center rounded-2xl text-white">All</span></a>
+    <a href="https://www.youtube.com/results?search_query=javascript"><span class="ml-4 w-auto h-9 bg-gray-100 flex items-center justify-center rounded-2xl px-2 border-gray-300 border-2">Web Development Javasript</span></a>
+    <a href="https://www.youtube.com/results?search_query=travel"><span class="ml-4 w-auto h-9 bg-gray-100 flex items-center justify-center rounded-2xl px-2 border-gray-300 border-2">Travel</span></a>
+    <a href="https://www.youtube.com/results?search_query=upload"></a><span class="ml-4 w-auto h-9 bg-gray-100 flex items-center justify-center rounded-2xl px-2 border-gray-300 border-2">Recently Uploaded vids</span></a>
+    <a href="https://www.youtube.com/results?search_query=chelseafc"><span class="ml-4 w-auto h-9 bg-gray-100 flex items-center justify-center rounded-2xl px-2 border-gray-300 border-2">Chelsea fc</span></a>
+    <a href="https://www.youtube.com/results?search_query=premierLeague"><span class="ml-4 w-auto h-9 bg-gray-100 flex items-center justify-center rounded-2xl px-2 border-gray-300 border-2">English Premier </span></a>
+    <a href="https://www.youtube.com/results?search_query=programming"><span class="ml-4 w-auto h-9 bg-gray-100 flex items-center justify-center rounded-2xl px-2 border-gray-300 border-2">Programming</span></a>
+    <a href="https://www.youtube.com/results?search_query=reactjs"><span class="ml-4 w-auto h-9 bg-gray-100 flex items-center justify-center rounded-2xl px-2 border-gray-300 border-2">React Js</span></a>
+    <a href="https://www.youtube.com/results?search_query=softwareEngineering"><span class="ml-4 w-auto h-9 flex items-center justify-center rounded-2xl px-2 border-gray-300 border-2 bg-gradient-to-r from-gray-100 to-gray-100 mr-1 border-r-0">Software Enginee<span class="text-gray-300">ring </span> <span></a>
+    <div class="ml-auto">
+      
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-6 mr-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+    </div>
+      <!--recomendations end-->
+      <!--vides secton-->
+      <div class="videos-section w-auto h-screen ml-3">
+        <div class="section1 w-auto h-72 flex">
+<div class="img-container w-1/4 h-72 bg-gray-200 bg-opacity-80 rounded-lg ml-2 divide-y">
+  <a href="https://www.youtube.com/results?search_query=tech+lead"><img class="h-3/5 w-full object-scaledown" src="img/sonnyairbnb.jpeg" alt=""></a>
+<div class="pt-2 ml-2 flex ">
+  <a
+    class="flex text-sm items-center"
+    href="https://www.youtube.com/results?search_query=tech+lead"
+  >
+    <img
+      src="img/sonny.jpg"
+      alt="profile"
+      class="w-9 h-9 rounded-full object-cover opacity-90"
+    />
+    <h6 class="ml-2 text-black justify-center text-sm">React javscript 5 Days AIR BNB CHALLENGE</h6>
+  </a>
+</div>
+<a href="https://www.youtube.com/channel/UCqeTj_QAnNlmt7FwzNwHZnA"><h6 class="ml-12 mt-1 text-sm text-gray-500 justify-between hover:text-black">SONNY SANGHA</h6></a>
+<a href="https://www.youtube.com/watch?v=ifcODOhSH1o&t=3085s&ab_channel=SonnySangha"><h6 class="ml-12 mt-1 text-sm text-gray-500 hover:text-black">730K Views streamed . 1 week ago</h6></a>
+
+</div>
+<!--img container-2-->
+<div class="img-container w-1/4 h-72 bg-gray-200 bg-opacity-80 rounded-lg ml-4">
+  <a href="https://www.youtube.com/watch?v=f7T48W0cwXM&ab_channel=CleverProgrammer"><img class="h-3/5 w-full object-scaledown" src="img/clever programmer.jpeg" alt=""></a>
+<div class="pt-2 ml-2 flex ">
+  <a
+    class="flex text-sm items-center"
+    href="https://www.youtube.com/results?search_query=clever+Programmer"
+  >
+    <img
+      src="img/clever.jpg"
+      alt="profile"
+      class="w-9 h-9 rounded-full object-cover opacity-90"
+    />
+    <h6 class="ml-2 text-black justify-center text-sm">How to build instagram clone using React js for Beginners</h6>
+  </a>
+</div>
+<a href="https://www.youtube.com/CleverProgrammer"><h6 class="ml-12 mt-1 text-sm text-gray-500 justify-between hover:text-black">Clever Programmer</h6></a>
+<a href="https://www.youtube.com/CleverProgrammer"><h6 class="ml-12 mt-1 text-sm text-gray-500 hover:text-black">340K Views . 1 month ago</h6></a>
+
+</div>
+<!--img container end-->
+<!--img container-2-->
+<div class="img-container w-1/4 h-72 bg-gray-200 bg-opacity-80 rounded-lg ml-4">
+  <a href="https://www.youtube.com/results?search_query=tech+lead"><img class="h-3/5 w-full object-scaledown" src="img/techlead3.jpeg" alt=""></a>
+<div class="pt-2 ml-2 flex ">
+  <a
+    class="flex text-sm items-center"
+    href="https://www.youtube.com/results?search_query=tech+lead"
+  >
+    <img
+      src="img/techlead.jpeg"
+      alt="profile"
+      class="w-9 h-9 rounded-full object- opacity-90"
+    />
+    <h6 class="ml-2 text-black justify-center text-sm">Why I am Successfull than you .Ex-google software engineer</h6>
+  </a>
+</div>
+<a href="https://www.youtube.com/results?search_query=tech+lead"><h6 class="ml-12 mt-1 text-sm text-gray-500 justify-between hover:text-black">Tech Lead</h6></a>
+<a href="https://www.youtube.com/results?search_query=tech+lead"><h6 class="ml-12 mt-1 text-sm text-gray-500 hover:text-black">235K Views . 1 year ago</h6></a>
+
+</div>
+<!--img container end-->
+<!--img container-2-->
+<div class="img-container w-1/4 h-72 bg-gray-200 bg-opacity-80 rounded-lg ml-4">
+  <a href="https://www.youtube.com/results?search_query=tech+lead"><img class="h-3/5 w-full object-scaledown" src="img/kennarandkm.jpeg" alt=""></a>
+<div class="pt-2 ml-2 flex ">
+  <a
+    class="flex text-sm items-center"
+    href="https://www.youtube.com/watch?v=HRyRhY3nrLM&ab_channel=TalesofthecrazyKennar"
+  >
+    <img
+      src="img/crazykennarlogo.jpeg"
+      alt="profile"
+      class="w-9 h-9 rounded-full object-cover opacity-90"
+    />
+    <h6 class="ml-2 text-black justify-center text-sm">Crazy kenar features Kalonzo Musyoka compiltaions</h6>
+  </a>
+</div>
+<a href="https://www.youtube.com/c/TalesofthecrazyKennar/videos"><h6 class="ml-12 mt-1 text-sm text-gray-500 justify-between hover:text-black">Crazy Kennar</h6></a>
+<a href="https://www.youtube.com/watch?v=HRyRhY3nrLM&ab_channel=TalesofthecrazyKennar"><h6 class="ml-12 mt-1 text-sm text-gray-500 hover:text-black">640K Views . 2 months ago</h6></a>
+
+</div>
+<!--img container end-->
+</div>
+<!--second container-->
+<div class="section1 w-auto h-72 flex mt-2">
+  <div class="img-container w-1/4 h-72 bg-gray-200 bg-opacity-80 rounded-lg ml-2 divide-y">
+    <a href="https://www.youtube.com/watch?v=YSoJPA8-oHc&t=32s&ab_channel=MrBeast"><img class="h-3/5 w-full object-scaledown" src="img/mrbeastthumbnail.jpeg" alt=""></a>
+  <div class="pt-2 ml-2 flex ">
+    <a
+      class="flex text-sm items-center"
+      href="https://www.youtube.com/watch?v=9bqk6ZUsKyA&ab_channel=MrBeast"
+    >
+      <img
+        src="img/mrbeast.jpg"
+        alt="profile"
+        class="w-9 h-9 rounded-full object-cover opacity-90"
+      />
+      <h6 class="ml-2 text-black justify-center text-sm">IM paying my friend 0.1$ for every view on this video</h6>
+    </a>
+  </div>
+  <a href="https://www.youtube.com/watch?v=9bqk6ZUsKyA&ab_channel=MrBeast"><h6 class="ml-12 mt-1 text-sm text-gray-500 justify-between hover:text-black">MrBeast</h6></a>
+  <a href="https://www.youtube.com/watch?v=9bqk6ZUsKyA&ab_channel=MrBeast"><h6 class="ml-12 mt-1 text-sm text-gray-500 hover:text-black">83M Views . 3 weeks ago</h6></a>
+  
+  </div>
+  <!--img container-2-->
+  <div class="img-container w-1/4 h-72 bg-gray-200 bg-opacity-80 rounded-lg ml-4">
+    <a href="https://www.youtube.com/c/TheNetNinja"><img class="h-3/5 w-full object-scaledown" src="img/netninjathumb.jpeg" alt=""></a>
+  <div class="pt-2 ml-2 flex ">
+    <a
+      class="flex text-sm items-center"
+      href="https://www.youtube.com/results?search_query=tech+lead"
+    >
+      <img
+        src="img/ninja.jpg"
+        alt="profile"
+        class="w-9 h-9 rounded-full object-cover opacity-90"
+      />
+      <h6 class="ml-2 text-black justify-center text-sm">Full React js tutorial by the net ninja -Ninja family</h6>
+    </a>
+  </div>
+  <a href="https://www.youtube.com/c/TheNetNinja"><h6 class="ml-12 mt-1 text-sm text-gray-500 justify-between hover:text-black">The Net Ninja</h6></a>
+  <a href="https://www.youtube.com/c/TheNetNinja"><h6 class="ml-12 mt-1 text-sm text-gray-500 hover:text-black">130K Views . 2 weeks ago</h6></a>
+  
+  </div>
+  <!--img container end-->
+  <!--img container-2-->
+  <div class="img-container w-1/4 h-72 bg-gray-200 bg-opacity-80 rounded-lg ml-4">
+    <a href="https://www.youtube.com/results?search_query=tech+lead"><img class="h-3/5 w-full object-scaledown" src="img/hikaruthumbnail.jpeg" alt=""></a>
+  <div class="pt-2 ml-2 flex ">
+    <a
+      class="flex text-sm items-center"
+      href="https://www.youtube.com/c/GMHikaru/videos"
+    >
+      <img
+        src="img/hikaru.jpeg"
+        alt="profile"
+        class="w-9 h-9 rounded-full object-cover opacity-90"
+      />
+      <h6 class="ml-2 text-black justify-center text-sm">Five most dangerous Players in chess </h6>
+    </a>
+  </div>
+  <a href="https://www.youtube.com/c/GMHikaru/videos"><h6 class="ml-12 mt-1 text-sm text-gray-500 justify-between hover:text-black">GM Hikaru</h6></a>
+  <a href="https://www.youtube.com/c/GMHikaru/videos"><h6 class="ml-12 mt-1 text-sm text-gray-500 hover:text-black">130K Views . 2 hours ago</h6></a>
+  
+  </div>
+  <!--img container end-->
+  <!--img container-2-->
+  <div class="img-container w-1/4 h-72 bg-gray-200 bg-opacity-80 rounded-lg ml-4">
+  <a href="https://www.youtube.com/watch?v=f7T48W0cwXM&ab_channel=CleverProgrammer"><img class="h-3/5 w-full object-scaledown" src="img/clever programmer.jpeg" alt=""></a>
+<div class="pt-2 ml-2 flex ">
+  <a
+    class="flex text-sm items-center"
+    href="https://www.youtube.com/results?search_query=clever+Programmer"
+  >
+    <img
+      src="img/clever.jpg"
+      alt="profile"
+      class="w-9 h-9 rounded-full object-cover opacity-90"
+    />
+    <h6 class="ml-2 text-black justify-center text-sm">How to build instagram clone using React js for Beginners</h6>
+  </a>
+</div>
+<a href="https://www.youtube.com/CleverProgrammer"><h6 class="ml-12 mt-1 text-sm text-gray-500 justify-between hover:text-black">Clever Programmer</h6></a>
+<a href="https://www.youtube.com/CleverProgrammer"><h6 class="ml-12 mt-1 text-sm text-gray-500 hover:text-black">340K Views . 1 month ago</h6></a>
+
+</div>
+  <!--img container end-->
+  </div>
+  <div class="section1 w-auto h-72 flex mt-2">
+    <div class="img-container w-1/4 h-72 bg-gray-200 bg-opacity-80 rounded-lg ml-2 divide-y">
+      <a href="https://www.youtube.com/results?search_query=tech+lead"><img class="h-3/5 w-full object-scaledown" src="img/clever programmer.jpeg" alt=""></a>
+    <div class="pt-2 ml-2 flex ">
+      <a
+        class="flex text-sm items-center"
+        href="https://www.youtube.com/results?search_query=tech+lead"
+      >
+        <img
+          src="img/clever.jpg"
+          alt="profile"
+          class="w-9 h-9 rounded-full object-cover opacity-90"
+        />
+        <h6 class="ml-2 text-black justify-center text-sm">Javascript Tutorials for complete beginners</h6>
+      </a>
+    </div>
+    <a href="https://www.youtube.com/results?search_query=tech+lead"><h6 class="ml-12 mt-1 text-sm text-gray-500 justify-between hover:text-black">CleverProgrammer</h6></a>
+    <a href="https://www.youtube.com/results?search_query=tech+lead"><h6 class="ml-12 mt-1 text-sm text-gray-500 hover:text-black">740K Views . 1 day ago</h6></a>
+    
+    </div>
+    <!--img container-2-->
+    <div class="img-container w-1/4 h-72 bg-gray-200 bg-opacity-80 rounded-lg ml-4">
+      <a href="https://www.youtube.com/results?search_query=tech+lead"><img class="h-3/5 w-full object-scaledown" src="img/hikaruthumbnail.jpeg" alt=""></a>
+    <div class="pt-2 ml-2 flex ">
+      <a
+        class="flex text-sm items-center"
+        href="https://www.youtube.com/c/GMHikaru/videos"
+      >
+        <img
+          src="img/hikaru.jpeg"
+          alt="profile"
+          class="w-9 h-9 rounded-full object-cover opacity-90"
+        />
+        <h6 class="ml-2 text-black justify-center text-sm">Five most dangerous Players in chess </h6>
+      </a>
+    </div>
+    <a href="https://www.youtube.com/c/GMHikaru/videos"><h6 class="ml-12 mt-1 text-sm text-gray-500 justify-between hover:text-black">GM Hikaru</h6></a>
+    <a href="https://www.youtube.com/c/GMHikaru/videos"><h6 class="ml-12 mt-1 text-sm text-gray-500 hover:text-black">130K Views . 2 hours ago</h6></a>
+    
+    </div>
+    <!--img container end-->
+    <!--img container-2-->
+    <div class="img-container w-1/4 h-72 bg-gray-200 bg-opacity-80 rounded-lg ml-2 divide-y">
+      <a href="https://www.youtube.com/results?search_query=tech+lead"><img class="h-3/5 w-full object-scaledown" src="img/sonnyairbnb.jpeg" alt=""></a>
+    <div class="pt-2 ml-2 flex ">
+      <a
+        class="flex text-sm items-center"
+        href="https://www.youtube.com/results?search_query=tech+lead"
+      >
+        <img
+          src="img/sonny.jpg"
+          alt="profile"
+          class="w-9 h-9 rounded-full object-cover opacity-90"
+        />
+        <h6 class="ml-2 text-black justify-center text-sm">React javscript 5 Days AIR BNB CHALLENGE</h6>
+      </a>
+    </div>
+    <a href="https://www.youtube.com/channel/UCqeTj_QAnNlmt7FwzNwHZnA"><h6 class="ml-12 mt-1 text-sm text-gray-500 justify-between hover:text-black">SONNY SANGHA</h6></a>
+    <a href="https://www.youtube.com/watch?v=ifcODOhSH1o&t=3085s&ab_channel=SonnySangha"><h6 class="ml-12 mt-1 text-sm text-gray-500 hover:text-black">730K Views streamed . 1 week ago</h6></a>
+    
+    </div>
+    <!--img container end-->
+    <!--img container-2-->
+    <div class="img-container w-1/4 h-72 bg-gray-200 bg-opacity-80 rounded-lg ml-4">
+      <a href="https://www.youtube.com/results?search_query=tech+lead"><img class="h-3/5 w-full object-scaledown" src="img/lead.jpeg" alt=""></a>
+    <div class="pt-2 ml-2 flex ">
+      <a
+        class="flex text-sm items-center"
+        href="https://www.youtube.com/results?search_query=tech+lead"
+      >
+        <img
+          src="img/techlead.jpeg"
+          alt="profile"
+          class="w-9 h-9 rounded-full object-cover opacity-90"
+        />
+        <h6 class="ml-2 text-black justify-center text-sm">How I Code As a Millionairre In 2021 ex-google software engineer</h6>
+      </a>
+    </div>
+    <a href="https://www.youtube.com/results?search_query=tech+lead"><h6 class="ml-12 mt-1 text-sm text-gray-500 justify-between hover:text-black">TECH LEAD</h6></a>
+    <a href="https://www.youtube.com/results?search_query=tech+lead"><h6 class="ml-12 mt-1 text-sm text-gray-500 hover:text-black">730K Views . 1 week ago</h6></a>
+    
+    </div>
+    <!--img container end-->
+    </div>
+</div>
+      <!--videos section end-->
+     
+      </div>
+    </div>
+  </body>
 </html>
